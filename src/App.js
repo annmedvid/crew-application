@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import StageBlock from './components/StageBlock';
 import { fetchCrewList, changeCrewStage } from "./actions/crew.actions";
 
 class App extends PureComponent {
@@ -20,6 +21,14 @@ class App extends PureComponent {
 
     return (
       <article className="app">
+          {Object.keys(stages).map((key) =>
+            <StageBlock
+                key={key}
+                stage={stages[key]}
+                items={crewList.filter(item => item.currentStage == key)}
+                changeCrewStage={changeCrewStage}
+            />
+          )}
       </article>
     );
   }
