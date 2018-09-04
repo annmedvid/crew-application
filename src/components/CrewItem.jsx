@@ -1,6 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+type PictureInfo = {
+    large: string,
+    medium: string
+};
+
+type LoginInfo = {
+    username: string
+};
+
+type NameInfo = {
+    title: string,
+    first: string,
+    last: string
+};
+
+type Item = {
+    picture: PictureInfo,
+    login: LoginInfo,
+    name: NameInfo,
+    currentStage: number
+};
+
+type Props = {
+    item: Item,
+    changeStage: Function
+};
 
 const CrewItem = ({ item, changeStage }: Props) => (
     <section className="crew-item">
