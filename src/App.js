@@ -1,0 +1,36 @@
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { fetchCrewList, changeCrewStage } from "./actions/crew.actions";
+
+class App extends PureComponent {
+  static propTypes = {
+      crewList: PropTypes.arrayOf(PropTypes.shape()),
+      stages: PropTypes.shape(),
+      fetchCrewList: PropTypes.func,
+      changeCrewStage: PropTypes.func
+  };
+
+  componentDidMount() {
+    this.props.fetchCrewList();
+  }
+
+  render() {
+    const { crewList, stages, changeCrewStage } = this.props;
+
+    return (
+      <article className="app">
+      </article>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+    crewList: state.crew.crewList,
+    stages: state.crew.stages
+});
+
+export default connect(mapStateToProps, {
+    fetchCrewList,
+    changeCrewStage
+})(App);
