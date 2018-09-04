@@ -1,0 +1,2 @@
+export const FETCH_CREW_LIST = 'FETCH_CREW_LIST';
+export const CHANGE_CREW_STAGE = 'CHANGE_CREW_STAGE';
