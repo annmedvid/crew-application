@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.stage-block {
+  width: 450px;
+  padding: 20px 50px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.stage-header {
+  flex: 1 1 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.crew-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 3px;
+}
+
+.crew-name {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.crew-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.back-btn {
+  align-self: flex-start;
+}
+
+.go-btn {
+  align-self: flex-end;
+}
